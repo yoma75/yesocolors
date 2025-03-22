@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galería de Figuras</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-info mb-5 w-100">
+    <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="./assets/img/logoPagina2.png" alt="Logo" width="100" style="height: 150px; width: 150px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#quien-soy">Quién Soy</a></li>
+          <li class="nav-item"><a class="nav-link" href="#figuras">Figuras</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contactame">Contáctame</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Quién soy -->
+  <h2 class="text-center">FIGURAS DE YESO</h2>
+  <h5 class="text-center mb-5">en pinturas acrílicas y terminadas con barniz brillante</h5>
+
+  <!-- Fifuras -->  
+  <div class="seccion container" id="figuras">
+    <div class="row row-cols-1 row-cols-md-4 g-3" id="gallery"></div>
+  </div>
+
+  <!-- formulario y mapa -->
+  <div class="container mt-5 pb-5" id="registro">
+    <div class="row">
+      <!-- Mapa de ubicación -->
+      <div class="col-md-6 mb-4">
+        <h5 class="text-center">Nuestra Ubicación</h5>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12672.43384774286!2d-74.0063932!3d40.7127765!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDQyJzQ2LjAiTiA3NMKwMDAnMTUuNiJX!5e0!3m2!1ses!2s!4v1619098873989!5m2!1ses!2s"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
+      <!-- Formulario de registro -->
+      <div class="col-md-6">
+        <h5 class="text-center">¿Deseas registrarte?</h5>
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="apellido" class="form-label">Apellido</label>
+            <input type="text" class="form-control" id="apellido" required>
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correo" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+        </form>
+      </div>  
+    </div>  
+  </div>  <!-- Fin de formulario y mapa -->
+
+
+  <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4">
+    <p>© 2025 - Todos los derechos reservados.</p>
+    <div class="social-icons">
+      <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+    </div>
+  </footer>
+
+  
+  <!-- Modal para imágenes en grande -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Vista Ampliada</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="modalImage" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+
+</body>
+</html>
