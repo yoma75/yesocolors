@@ -46,31 +46,35 @@
   </div>
 
   <!-- formulario y mapa -->
-  <div class="container mt-5 pb-5" id="registro">
+  <div class="container mt-5 mb-5 bg-info-subtle px-5 pb-4" id="registro">
     <div class="row">
       <!-- Mapa de ubicación -->
       <div class="col-md-6 mb-4">
-        <h5 class="text-center pb-3">Nuestra Ubicación</h5>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7953.024039950657!2d-74.11306559154308!3d4.680696751343379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1742865779158!5m2!1ses-419!2sco" width="100%" height="300" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <h5 class="text-center pb-3 pt-4">Nuestra Ubicación</h5>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7953.024039950657!2d-74.11306559154308!3d4.680696751343379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1742865779158!5m2!1ses-419!2sco" width="100%" height="405" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
 
       <!-- Formulario de registro -->
       <div class="col-md-6">
-        <h5 class="text-center">¿Deseas registrarte?</h5>
+        <h5 class="text-center pt-4">¿Deseas registrarte?</h5>
         <form id="form" class="form" action="https://formspree.io/f/xgedpglj" method="POST">
           <div class="mb-3">
-            <label for="nombre" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" required>
+            <label for="name" class="form-label">Nombre</label>
+            <input name="name" type="text" class="form-control" id="nombre" required>
           </div>
           <div class="mb-3">
-            <label for="apellido" class="form-label">Apellido</label>
-            <input type="text" class="form-control" id="apellido" required>
+            <label for="lastname" class="form-label">Apellido</label>
+            <input name="name" type="text" class="form-control" id="apellido" required>
           </div>
           <div class="mb-3">
-            <label for="correo" class="form-label">Correo Electrónico</label>
+            <label for="email" class="form-label">Correo Electrónico</label>
             <input type="email" class="form-control" id="correo" required>
           </div>
-          <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+          <div class="mb-3">
+            <label for="message">Mensaje</label>
+            <textarea name="message" class="form-control" id="message" rows="3"></textarea>            
+          </div>
+          <button type="submit" class="btn btn-info w-100">Registrarse</button>
         </form>
       </div>
     </div>
