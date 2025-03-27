@@ -39,7 +39,7 @@
     }
 
     .figure-container {
-      height: 400px; /* Ajusta esta altura según tus necesidades */
+      height: 500px; /* Ajusta esta altura según tus necesidades */
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -65,6 +65,6 @@
       color: #E4405F;
     }
 
-    .social-icons i.bi-twitter:hover {
-      color: #1DA1F2;
+    .social-icons i.bi-whatsapp:hover {
+      color: #28f21d;
     }
