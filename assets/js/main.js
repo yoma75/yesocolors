@@ -1,13 +1,13 @@
 
 const figuras = [
-  { nombre: "Yoshi", valor: "8.000 COP", codigo: "F1", tamaño: "10x10cm" },
-  { nombre: "Corazón con Alas", valor: "9.000 COP", codigo: "F2", tamaño: "10x10cm" },
-  { nombre: "Alas Pared", valor: "19.000 COP", codigo: "F3", tamaño: "10x10cm" },
-  { nombre: "Cajita", valor: "6.500 COP", codigo: "F4", tamaño: "10x10cm" },
-  { nombre: "Vaca", valor: "6.500 COP", codigo: "F5", tamaño: "10x10cm" },
-  { nombre: "Alcancía Virgen", valor: "16.700 COP", codigo: "F6", tamaño: "10x10cm" },
-  { nombre: "Escudo SantaFe", valor: "6.000 COP", codigo: "F7", tamaño: "10x10cm" },
-  { nombre: "Escudo Nacional", valor: "6.000 COP", codigo: "F8", tamaño: "10x10cm" }
+  { nombre: "Yoshi", valor: "13.000 COP", codigo: "F1", tamaño: "7 x 11cm" },
+  { nombre: "Corazón con Alas", valor: "12.600 COP", codigo: "F2", tamaño: "24 x 7cm" },
+  { nombre: "Alas Pared", valor: "24.500 COP", codigo: "F3", tamaño: "43 x 11cm" },
+  { nombre: "Cajita", valor: "7.500 COP", codigo: "F4", tamaño: "7 x 7cm" },
+  { nombre: "Vaca", valor: "12.000 COP", codigo: "F5", tamaño: "8 x 9cm" },
+  { nombre: "Alcancía Virgen", valor: "15.000 COP", codigo: "F6", tamaño: "15 x 24cm" },
+  { nombre: "Escudo SantaFe", valor: "9.000 COP", codigo: "F7", tamaño: "11 x 13cm" },
+  { nombre: "Escudo Nacional", valor: "9.000 COP", codigo: "F8", tamaño: "9 x 14cm" }
 ];
 
 const gallery = document.getElementById("gallery");
