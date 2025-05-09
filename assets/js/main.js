@@ -7,7 +7,9 @@ const figuras = [
   { nombre: "Vaca", valor: "12.000 COP", codigo: "F5", tamaño: "8 x 9cm" },
   { nombre: "Alcancía Virgen", valor: "15.000 COP", codigo: "F6", tamaño: "15 x 24cm" },
   { nombre: "Escudo SantaFe", valor: "9.000 COP", codigo: "F7", tamaño: "11 x 13cm" },
-  { nombre: "Escudo Nacional", valor: "9.000 COP", codigo: "F8", tamaño: "9 x 14cm" }
+  { nombre: "Escudo Nacional", valor: "9.000 COP", codigo: "F8", tamaño: "9 x 14cm" },
+  { nombre: "Florero", valor: "15.000 COP", codigo: "F9", tamaño: "10 x 19cm" },
+  { nombre: "Alas-angel Candelabro", valor: "13.000 COP", codigo: "F10", tamaño: "9 x 10cm" }
 ];
 
 const gallery = document.getElementById("gallery");
