@@ -11,7 +11,10 @@ const figuras = [
   { nombre: "Florero", valor: "15.000 COP", codigo: "F9", tamaño: "10 x 19cm" },
   { nombre: "Alas-angel Candelabro", valor: "13.000 COP", codigo: "F10", tamaño: "9 x 10cm" },
   { nombre: "Papagayo", valor: "23.000 COP", codigo: "F11", tamaño: "9 x 19cm" },
-  { nombre: "Mano Candelabro", valor: "12.000 COP", codigo: "F12", tamaño: "8 x 13cm" }
+  { nombre: "Mano Candelabro", valor: "12.000 COP", codigo: "F12", tamaño: "8 x 13cm" },
+  { nombre: "Buda", valor: "18.000 COP", codigo: "F13", tamaño: "14 x 20cm" },
+  { nombre: "Gato", valor: "17.000 COP", codigo: "F14", tamaño: "23 x 12cm" },
+  { nombre: "Cuadro Castillo", valor: "93.000 COP", codigo: "F15", tamaño: "30 x 23cm" }
 ];
 
 const gallery = document.getElementById("gallery");
