@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vendidas - YesoColors</title>
+  <meta name="author" content="Fredy Colorado">
+  <meta name="description" content="figuras de yeso pintadas con pintura acrilica">
+  <meta name="keywords"
+    content="yeso, figuras, pintura, acrilica, barniz, Figuras de yeso pintadas, Figuras decorativas de yeso, Venta de figuras de yeso, Figuras de yeso para el hogar, figuras de yeso para niños, Decoración con figuras de yeso, Arte en yeso pintado, Figuras religiosas de yeso, Figuras de yeso para regalos, Figuras de yeso personalizadas, Artesanías de yeso pintadas, Esculturas de yeso pintadas a mano, Figuras de yeso coleccionables, Figuras de yeso para jardines, Figuras de yeso exclusivas">
+  <link rel="icon" href="./assets/img/logoSF7.png" type="image/x-icon">
+  <!-- Google Adsense -->
+  <meta name="google-adsense-account" content="ca-pub-8822144169928578">
+  <!-- Google search console -->
+  <meta name="google-site-verification" content="Dws0YkkxgWt_rw6iSWdyQGuqHP0UNWrd0wHOYgzf_z0" />
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-info mb-5 w-100">
+    <div class="container">
+      <a class="navbar-brand" href="./index.html">
+        <img src="./assets/img/logoPagina2.png" alt="Logo" width="100" style="height: 150px; width: 150px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="#navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- <li class="nav-item"><a class="nav-link" href="#quien-soy">Quién Soy</a></li> -->
+          <li class="nav-item"><a class="nav-link" href="./index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="https://wa.me/573232827654" target="_blank">Contáctame</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Titulo -->
+  <h2 class="text-center">LAS QUE SE HAN VENDIDO</h2>
+  <h5 class="text-center mb-5">en pinturas acrílicas y terminadas con barniz brillante</h5>
+
+  <!-- Figuras -->
+  <div class="container">
+    <div class="row row-cols-1 row-cols-md-4 g-3" id="gallery-vendidas"></div>
+  </div>  
+
+    <!-- Footer -->
+  <footer class="text-center bg-dark text-white py-4">
+    <p>© 2025 - Todos los derechos reservados.</p>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/yesocolors/" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+      <a href="https://wa.me/573232827654" target="_blank"" class="text-white me-3"><i class="bi bi-whatsapp"></i></a>      
+    </div>
+  </footer>
+
+
+  <!-- Modal para mostrar imágenes en grande -->
+  <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="imageModalLabel">Vista Ampliada</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="modalImage" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./assets/js/vendidas.js"></script>
+
+</body>
+</html>
