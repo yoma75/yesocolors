@@ -1,16 +1,16 @@
 
 const figuras = [
-  { nombre: "Joyero", valor: "17.000 COP", codigo: "F1", tamaño: "10 x 6cm" },
+  { nombre: "Joyero", valor: "15.000 COP", codigo: "F1", tamaño: "10 x 6cm" },
   { nombre: "Vaca blanca", valor: "15.600 COP", codigo: "F2", tamaño: "24 x 7cm" },
   { nombre: "Alas Pared", valor: "37.500 COP", codigo: "F3", tamaño: "43 x 11cm" },
   { nombre: "Florero", valor: "18.500 COP", codigo: "F4", tamaño: "6 x 10cm" },
   { nombre: "Vaca", valor: "15.600 COP", codigo: "F5", tamaño: "8 x 9cm" },
-  { nombre: "Espejitos", valor: "25.600 COP - c/u: 14.000", codigo: "F6", tamaño: "7 x 8cm" },
+  { nombre: "Espejitos", valor: "14.000 c/u", codigo: "F6", tamaño: "7 x 8cm" },
   { nombre: "Escudo SantaFe", valor: "9.000 COP", codigo: "F7", tamaño: "11 x 13cm" },
   { nombre: "Escudo Nacional", valor: "9.000 COP", codigo: "F8", tamaño: "9 x 14cm" },
   { nombre: "Florero", valor: "15.000 COP", codigo: "F9", tamaño: "10 x 19cm" },
   { nombre: "Alas-angel Candelabro", valor: "15.000 COP", codigo: "F10", tamaño: "9 x 10cm" },
-  { nombre: "Materitas", valor: "14.500 COP - c/u: 7.250", codigo: "F11", tamaño: "5 x 5cm" },
+  { nombre: "Materitas", valor: "7.250 c/u COP", codigo: "F11", tamaño: "5 x 5cm" },
   { nombre: "Mano Candelabro", valor: "15.000 COP", codigo: "F12", tamaño: "8 x 13cm" },
   { nombre: "Buda", valor: "26.300 COP", codigo: "F13", tamaño: "14 x 20cm" },
   { nombre: "Gato", valor: "19.500 COP", codigo: "F14", tamaño: "23 x 12cm" },
@@ -19,7 +19,9 @@ const figuras = [
   { nombre: "Florero", valor: "15.000 COP", codigo: "F17", tamaño: "8 x 10cm" },
   { nombre: "Marranito Winnie Pooh", valor: "8.900 COP", codigo: "F18", tamaño: "4 x 5cm" },
   { nombre: "Marranito Deportivo", valor: "8.900 COP", codigo: "F19", tamaño: "4 x 5cm" },
-  { nombre: "Marranito Bellota", valor: "8.900 COP", codigo: "F20", tamaño: "4 x 5cm" }
+  { nombre: "Marranito Bellota", valor: "8.900 COP", codigo: "F20", tamaño: "4 x 5cm" },
+  { nombre: "Ositos", valor: "12.500 c/u COP", codigo: "F21", tamaño: "5 x 6cm" },
+  { nombre: "Minión Portalápiz", valor: "8.300 COP", codigo: "F22", tamaño: "4 x 10cm" }
 ];
 
 const gallery = document.getElementById("gallery");
