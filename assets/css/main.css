@@ -1,0 +1,251 @@
+body,
+nav,
+.hero {
+	margin: 0;
+	padding: 0;
+}
+
+
+.navbar {
+	position: fixed;
+	/* Siempre arriba y encima */
+	top: 0;
+	width: 100%;
+	z-index: 1000;
+	background-color: transparent;
+	/* Inicialmente transparente */
+	transition: background-color 0.4s ease, box-shadow 0.4s ease;
+	/* Animación suave */
+	padding: 1rem;
+}
+
+/* Clase que se activa al hacer scroll */
+.navbar.scrolled {
+	background-color: #add8e6 !important;
+	/* Azul claro */
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-nav .nav-link {
+	font-size: 1.3rem;
+	color: rgb(74, 70, 70);
+	/* Texto blanco sobre la imagen */
+	margin-right: 1rem;
+	transition: color 0.3s ease;
+
+}
+
+.navbar-nav .nav-link:hover {
+	color: #ed1cb9;
+	text-transform: uppercase;
+}
+
+/* Hero */
+.hero {
+	width: 100%;
+	min-height: 100vh;
+	background-image: url('../img/imagenHero.jpeg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 2rem;
+	box-sizing: border-box;
+}
+
+.hero-content {
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	padding: 2rem;
+	border-radius: 10px;
+	max-width: 90%;
+	animation: fadeIn 2.5s ease;
+}
+
+.hero h1 {
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+
+.hero p {
+	font-size: 1.2rem;
+}
+
+/* Animación para hero content */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+/* Ajuste en móviles: espacio extra */
+@media (max-width: 991px) {
+	.hero {
+		padding-top: 160px;
+	}
+
+	.navbar-collapse {
+		background-color: rgba(0, 0, 0, 0.9);
+		padding: 1rem;
+		border-radius: 0 0 10px 10px;
+		animation: fadeMenu 0.4s ease;
+	}
+
+	.navbar-collapse .nav-link {
+		color: white !important;
+	}
+
+	.navbar-collapse .nav-link:hover {
+		color: #ed1cb9 !important;
+	}
+}
+
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 998px) {
+	.hero {
+		min-height: 50vh;
+		padding-top: 160px;
+		padding-bottom: 2rem;
+	}
+
+	.hero h1 {
+		font-size: 2rem;
+	}
+
+	.hero p {
+		font-size: 1rem;
+	}
+
+	.navbar-brand img {
+		height: 130px !important;
+		width: 137px !important;
+	}
+
+	.navbar-collapse {
+		background-color: #add8e6;
+		padding: 1rem;
+		border-radius: 0 0 10px 10px;
+		/* opcional, estética */
+	}
+
+	.navbar-collapse .nav-link {
+		color: rgb(88, 81, 81) !important;
+		font-size: 1.3rem;
+		text-align: center;
+
+	}
+
+	.navbar-collapse .nav-link:hover {
+		color: #ed1cb9 !important;
+	}
+
+	@keyframes fadeMenu {
+		from {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+
+		to {
+			opacity: 1;
+			transform: translateY(0);
+		}
+	}
+}
+
+
+/* Seccion figuras */
+.thumbnail {
+	cursor: pointer;
+	border: 2px solid transparent;
+	transition: 0.3s;
+	width: 60px;
+	height: 60px;
+	object-fit: cover;
+}
+
+.thumbnail:hover,
+.thumbnail.active {
+	border: 2px dotted #36e2f1;
+}
+
+.main-image {
+	cursor: pointer;
+	max-width: 100%;
+	max-height: 200px;
+	/* Ajusta esta altura según tus necesidades */
+	width: auto;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+	/* Centra la imagen horizontalmente */
+}
+
+.figure-container {
+	height: 500px;
+	/* Ajusta esta altura según tus necesidades */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	/* Centra el contenido horizontalmente */
+}
+
+.figure-container img {
+	max-height: 200px;
+	/* Ajusta esta altura según tus necesidades */
+	width: auto;
+}
+
+/* Redes sociales */
+.social-icons i {
+	font-size: 1.5rem;
+	transition: color 0.3s ease-in-out;
+}
+
+.social-icons i.bi-facebook:hover {
+	color: #1877F2;
+}
+
+.social-icons i.bi-instagram:hover {
+	color: #E4405F;
+}
+
+.social-icons i.bi-whatsapp:hover {
+	color: #28f21d;
+}
+
+
+
+/* Para navegadores WebKit (Chrome, Edge, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 10px; /* ancho de la barra */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* color del fondo */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 247, 255); /* color de la barra */
+  border-radius: 5px; /* esquinas redondeadas */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(0, 139, 83); /* color al pasar el mouse */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin; /* delgado */
+  scrollbar-color: rgb(199, 4, 95) #f1f1f1; /* barra roja, fondo gris */
+}
