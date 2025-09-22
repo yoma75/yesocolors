@@ -68,3 +68,19 @@
     .social-icons i.bi-whatsapp:hover {
       color: #28f21d;
     }
+
+    /* Tarjetas con altura uniforme */
+.seccion {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#gallery-vendidas {
+  margin-bottom: 3rem; /* ajusta el valor a tu gusto */
+}
+
+#gallery-vendidas .col {
+  margin-bottom: 1rem; 
+}
