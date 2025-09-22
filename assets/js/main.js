@@ -1,10 +1,10 @@
 
 const figuras = [
-  { nombre: "Joyero", valor: "15.000 COP", codigo: "F1", tamaño: "10 x 6cm" },
-  { nombre: "Vaca blanca", valor: "15.600 COP", codigo: "F2", tamaño: "24 x 7cm" },
+  { nombre: "Cristo", valor: "19.500 COP", codigo: "F1", tamaño: "17 x 31cm" },
+  { nombre: "Vaca blanca", valor: "13.000 COP", codigo: "F2", tamaño: "24 x 7cm" },
   { nombre: "Alas Pared", valor: "37.500 COP", codigo: "F3", tamaño: "43 x 11cm" },
   { nombre: "Florero", valor: "18.500 COP", codigo: "F4", tamaño: "6 x 10cm" },
-  { nombre: "Vaca", valor: "15.600 COP", codigo: "F5", tamaño: "8 x 9cm" },
+  { nombre: "Vaca", valor: "13.000 COP", codigo: "F5", tamaño: "8 x 9cm" },
   { nombre: "Espejitos", valor: "14.000 c/u", codigo: "F6", tamaño: "7 x 8cm" },
   { nombre: "Escudo SantaFe", valor: "9.000 COP", codigo: "F7", tamaño: "11 x 13cm" },
   { nombre: "Escudo Nacional", valor: "9.000 COP", codigo: "F8", tamaño: "9 x 14cm" },
@@ -16,12 +16,14 @@ const figuras = [
   { nombre: "Gato", valor: "19.500 COP", codigo: "F14", tamaño: "23 x 12cm" },
   { nombre: "Cuadro Castillo", valor: "95.000 COP", codigo: "F15", tamaño: "30 x 23cm" },
   { nombre: "Sagrado Corazón de Jesús", valor: "54.900 COP", codigo: "F16", tamaño: "19 x 26cm" },
-  { nombre: "Florero", valor: "15.000 COP", codigo: "F17", tamaño: "8 x 10cm" },
-  { nombre: "Marranito Winnie Pooh", valor: "8.900 COP", codigo: "F18", tamaño: "4 x 5cm" },
-  { nombre: "Marranito Deportivo", valor: "8.900 COP", codigo: "F19", tamaño: "4 x 5cm" },
-  { nombre: "Marranito Bellota", valor: "8.900 COP", codigo: "F20", tamaño: "4 x 5cm" },
-  { nombre: "Ositos", valor: "12.500 c/u COP", codigo: "F21", tamaño: "5 x 6cm" },
-  { nombre: "Minión Portalápiz", valor: "8.300 COP", codigo: "F22", tamaño: "4 x 10cm" }
+  { nombre: "Ala angel para vela", valor: "12.000 COP", codigo: "F17", tamaño: "7 x 13cm" },
+  { nombre: "Marranito Winnie Pooh", valor: "7.500 COP", codigo: "F18", tamaño: "4 x 5cm" },
+  { nombre: "Marranito Deportivo", valor: "7.500 COP", codigo: "F19", tamaño: "4 x 5cm" },
+  { nombre: "Marranito Bellota", valor: "7.500 COP", codigo: "F20", tamaño: "4 x 5cm" },
+  { nombre: "Ositos", valor: "8.000 c/u COP", codigo: "F21", tamaño: "5 x 6cm" },
+  { nombre: "Osos Enamorados", valor: "25.000 COP", codigo: "F22", tamaño: "14 x 10cm" },
+  { nombre: "Figuritas Imantadas", valor: "2.000 c/u COP ", codigo: "F23", tamaño: "variado" },
+  { nombre: "Corazones Imantados", valor: "3.000 y 4.500 c/u COP", codigo: "F23", tamaño: "6 x 10" }
 ];
 
 const gallery = document.getElementById("gallery");
