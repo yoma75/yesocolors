@@ -10,7 +10,8 @@ const figurasVendidas = [
   { nombre: "Florero", valor: "15.0000 COP", imagen: "./assets/img/imgVendidas/vendida8.png" },
   { nombre: "Minion Portalápiz", valor: "8.000 COP", imagen: "./assets/img/imgVendidas/vendida9.png" },
   { nombre: "Portalapices", valor: "9.500 COP", imagen: "./assets/img/imgVendidas/vendida10.png" },
-  { nombre: "Osita", valor: "8.000 COP", imagen: "./assets/img/imgVendidas/vendida11.png" }
+  { nombre: "Osita", valor: "8.000 COP", imagen: "./assets/img/imgVendidas/vendida11.png" },
+  { nombre: "Niña Bailarina", valor: "14.400 COP", imagen: "./assets/img/imgVendidas/vendida12.png" }
 ];
 
 const galleryVendidas = document.getElementById("gallery-vendidas");
