@@ -8,8 +8,19 @@
 
 
 <url>
-  <loc>https://yesocolors.lat/</loc>
-  <lastmod>2025-03-30T02:21:21+00:00</lastmod>
+  <loc>https://yesocolors.com/</loc>
+  <lastmod>2025-10-11T17:27:16+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://yesocolors.com/vendidas.html</loc>
+  <lastmod>2025-10-11T17:27:16+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://yesocolors.com/index.html</loc>
+  <lastmod>2025-10-11T17:27:16+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
