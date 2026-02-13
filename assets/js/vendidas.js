@@ -11,7 +11,13 @@ const figurasVendidas = [
   { nombre: "Minion Portalápiz", valor: "8.000 COP", imagen: "./assets/img/imgVendidas/vendida9.png" },
   { nombre: "Portalapices", valor: "9.500 COP", imagen: "./assets/img/imgVendidas/vendida10.png" },
   { nombre: "Osita", valor: "8.000 COP", imagen: "./assets/img/imgVendidas/vendida11.png" },
-  { nombre: "Niña Bailarina", valor: "14.400 COP", imagen: "./assets/img/imgVendidas/vendida12.png" }
+  { nombre: "Niña Bailarina", valor: "14.400 COP", imagen: "./assets/img/imgVendidas/vendida12.png" },
+  { nombre: "Candelabro Ala Angel", valor: "12.000 COP", imagen: "./assets/img/imgVendidas/vendida13.png" },
+  { nombre: "Materitas", valor: "7.250 c/u COP", imagen: "./assets/img/imgVendidas/vendida14.png" },
+  { nombre: "Piedras Imantadas Grupo A", valor: "3.500 c/u = 31.500 COP", imagen: "./assets/img/imgVendidas/vendida15.png" },
+  { nombre: "Piedras Imantadas Grupo B", valor: "2.500 c/u = 45.000 COP", imagen: "./assets/img/imgVendidas/vendida16.png" },
+  { nombre: "Piedras Imantadas Grupo C", valor: "11.500 COP", imagen: "./assets/img/imgVendidas/vendida17.png" },
+  { nombre: "Florero Decorativo", valor: "18.500 COP", imagen: "./assets/img/imgVendidas/vendida18.png" }
 ];
 
 const galleryVendidas = document.getElementById("gallery-vendidas");
