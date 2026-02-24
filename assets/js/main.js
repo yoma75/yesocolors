@@ -3,24 +3,24 @@ const figuras = [
   { nombre: "Cristo", valor: "25.300 COP", codigo: "F1", tamaño: "17 x 31cm" },
   { nombre: "Vaca blanca", valor: "14.900 COP", codigo: "F2", tamaño: "24 x 7cm" },
   { nombre: "Alas Pared", valor: "37.500 COP", codigo: "F3", tamaño: "43 x 11cm" },
-  { nombre: "Piedras Imantadas", valor: "3.500 c/u COP", codigo: "F4", tamaño: "variado" },
+  { nombre: "Piedras Imantadas", valor: "2.500 y 3.500 c/u COP", codigo: "F4", tamaño: "variado" },
   { nombre: "Vaca", valor: "14.900 COP", codigo: "F5", tamaño: "8 x 9cm" },
   { nombre: "Espejitos", valor: "14.000 c/u", codigo: "F6", tamaño: "7 x 8cm" },
   { nombre: "Escudo SantaFe", valor: "9.000 COP", codigo: "F7", tamaño: "11 x 13cm" },
   { nombre: "Escudo Nacional", valor: "9.000 COP", codigo: "F8", tamaño: "9 x 14cm" },
-  { nombre: "Florero", valor: "15.000 COP", codigo: "F9", tamaño: "10 x 19cm" },
+  { nombre: "Florero", valor: "14.300 COP", codigo: "F9", tamaño: "10 x 19cm" },
   { nombre: "Alas-angel Candelabro", valor: "14.300 COP", codigo: "F10", tamaño: "9 x 10cm" },
   { nombre: "OFERTA --> 4 unidades", valor: "21.000 COP", codigo: "F11", tamaño: "5 x 5cm" },
   { nombre: "Mano Candelabro", valor: "15.000 COP", codigo: "F12", tamaño: "8 x 13cm" },
   { nombre: "Buda", valor: "30.500 COP", codigo: "F13", tamaño: "14 x 20cm" },
-  { nombre: "Gato", valor: "20.500 COP", codigo: "F14", tamaño: "23 x 12cm" },
+  { nombre: "Gato", valor: "27.500 COP", codigo: "F14", tamaño: "23 x 12cm" },
   { nombre: "Cuadro Castillo", valor: "95.000 COP", codigo: "F15", tamaño: "30 x 23cm" },
   { nombre: "Sagrado Corazón de Jesús", valor: "54.900 COP", codigo: "F16", tamaño: "19 x 26cm" },
   { nombre: "Buda + Niños Budistas", valor: "44.000 COP", codigo: "F17", tamaño: "Buda: 7 x 13cm y Niños: 4 x 5cm" },
   { nombre: "Marranito Winnie Pooh", valor: "6.500 COP", codigo: "F18", tamaño: "4 x 5cm" },
   { nombre: "Marranito Deportivo", valor: "6.500 COP", codigo: "F19", tamaño: "4 x 5cm" },
   { nombre: "Marranito Bellota", valor: "6.500 COP", codigo: "F20", tamaño: "4 x 5cm" },
-  { nombre: "Ositos", valor: "8.500 c/u COP", codigo: "F21", tamaño: "5 x 6cm" },
+  { nombre: "Sagrada Familia", valor: "45.500 COP", codigo: "F21", tamaño: "14 x 18" },  
   { nombre: "Osos Enamorados", valor: "25.000 COP", codigo: "F22", tamaño: "14 x 10cm" },
   { nombre: "Piedras Imantadas", valor: "3.500 c/u y 4.500 c/u COP ", codigo: "F23", tamaño: "variado" },
   { nombre: "Corazones Imantados", valor: "3.000 y 4.500 c/u COP", codigo: "F23", tamaño: "6 x 10" },
@@ -31,8 +31,7 @@ const figuras = [
   { nombre: "Angry Bird Red", valor: "6.500 COP", codigo: "F28", tamaño: "4 x 5cm" },
   { nombre: "Angry Bird King Pig", valor: "6.500 COP", codigo: "F29", tamaño: "4 x 5cm" },
   { nombre: "Virgen de Guadalupe", valor: "42.500 COP", codigo: "F30", tamaño: "11 x 22" },
-  { nombre: "Maestro Roshi", valor: "25.300 COP", codigo: "F31", tamaño: "17 x 18" },
-  { nombre: "Sagrada Familia", valor: "45.500 COP", codigo: "F32", tamaño: "14 x 18" }
+  { nombre: "Maestro Roshi", valor: "28.000 COP", codigo: "F31", tamaño: "17 x 18" }
 ];
 
 const gallery = document.getElementById("gallery");
