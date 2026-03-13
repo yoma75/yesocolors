@@ -18,7 +18,9 @@ const figurasVendidas = [
   { nombre: "Piedras Imantadas Grupo B", valor: "2.500 c/u = 45.000 COP", imagen: "./assets/img/imgVendidas/vendida16.png" },
   { nombre: "Piedras Imantadas Grupo C", valor: "11.500 COP", imagen: "./assets/img/imgVendidas/vendida17.png" },
   { nombre: "Florero Decorativo", valor: "18.500 COP", imagen: "./assets/img/imgVendidas/vendida18.png" },
-  { nombre: "Ositos", valor: "8.500 c/u COP", imagen: "./assets/img/imgVendidas/vendida19.png" }
+  { nombre: "Ositos", valor: "8.500 c/u COP", imagen: "./assets/img/imgVendidas/vendida19.png" },
+  { nombre: "Ositos Enamorados", valor: "25.000 COP", imagen: "./assets/img/imgVendidas/vendida20.png" },
+  { nombre: "Candelabro Mano", valor: "15.000 COP", imagen: "./assets/img/imgVendidas/vendida21.png" }
 ];
 
 const galleryVendidas = document.getElementById("gallery-vendidas");
