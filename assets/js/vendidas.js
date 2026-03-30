@@ -9,7 +9,7 @@ const figurasVendidas = [
   { nombre: "Joyero", valor: "15.000 COP", imagen: "./assets/img/imgVendidas/vendida7.png" },
   { nombre: "Florero", valor: "15.0000 COP", imagen: "./assets/img/imgVendidas/vendida8.png" },
   { nombre: "Minion Portalápiz", valor: "8.000 COP", imagen: "./assets/img/imgVendidas/vendida9.png" },
-  { nombre: "Portalapices", valor: "9.500 COP", imagen: "./assets/img/imgVendidas/vendida10.png" },
+  { nombre: "Materita", valor: "9.500 COP", imagen: "./assets/img/imgVendidas/vendida10.png" },
   { nombre: "Osita", valor: "8.000 COP", imagen: "./assets/img/imgVendidas/vendida11.png" },
   { nombre: "Niña Bailarina", valor: "14.400 COP", imagen: "./assets/img/imgVendidas/vendida12.png" },
   { nombre: "Candelabro Ala Angel", valor: "12.000 COP", imagen: "./assets/img/imgVendidas/vendida13.png" },
