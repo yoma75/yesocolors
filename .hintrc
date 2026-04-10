@@ -43,6 +43,7 @@
           "scrollbar-color"
         ]
       }
-    ]
+    ],
+    "css-prefix-order": "off"
   }
 }
