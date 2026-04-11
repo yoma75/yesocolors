@@ -1,0 +1,201 @@
+/* CLASE UNIVERSAL DE DEGRADADO palabra COLORS */
+.efecto-colors {
+  background: linear-gradient(to right,
+      #FF5733, #33FF57, #3357FF, #F333FF, #FF33A8, #FFD433);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  display: inline-block;
+  /* Importante para que el degradado se ajuste bien al texto */
+  font-weight: bold;
+}
+
+/* --- NUEVA CLASE UNIVERSAL CON BORDE DEGRADADO CAFÉ palabra STONE --- */
+.efecto-stone {
+  position: relative;  /* Necesario para posicionar el borde por debajo */
+  display: inline-block;  /* Importante para el posicionamiento */
+  font-weight: bold;
+  color: transparent;  /* El texto real es transparente para ver el degradado interior */
+}
+
+/* 1. Definimos el degradado de FONDO de las letras (color piedra) */
+.efecto-stone {
+  background: linear-gradient(to right,
+      #a6a6a6,      /* Gris claro */
+      #d9ccb9,      /* Beige suave */
+      #a6a6a6      /* Gris claro */
+    );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;  /* Duplicado para compatibilidad */
+}
+
+/* Creamos el BORDE DEGRADADO CAFÉ usando un duplicado del texto (::after) */
+.efecto-stone::after {
+  content: attr(data-text);  /* Mágica: Copiamos el texto real de STONE */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;  /* Posicionamos el borde POR DETRÁS del texto real */
+
+  /* Definimos el degradado de café oscuro para el BORDE */
+  background: linear-gradient(to right,
+      #4a3a2a,      /* Café oscuro moka */
+      #654a3a,      /* Café nogal */
+      #4a3a2a       /* Volvemos al moka */
+    );
+
+  /* Recortamos el fondo degradado para que solo se vea DENTRO del duplicado */
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* Hacemos que el color del duplicado sea transparente para ver el degradado */
+  -webkit-text-fill-color: transparent;
+
+  /* Mágica del Borde: Usamos 'text-stroke' para crear el contorno real */
+  -webkit-text-stroke: 2.9px;  /* Definimos el grosor del borde */
+}
+
+/* Toque Final: Agregamos una sombra suave para separarlo aún más del fondo */
+.efecto-stone {
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);  /* Sombra suave hacia abajo */
+}
+
+
+/* Hero full screen con imagen de fondo */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.134)),
+    url('../img/piedrasHero.png') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.main-title {
+  font-size: clamp(2.5rem, 10vw, 5.5rem);
+  letter-spacing: 10px;
+  font-weight: 800;
+  color: #333;
+}
+
+.custom-divider {
+  width: 100%;
+  max-width: 650px;
+  height: 5px;
+  background-color: #735050d8;
+}
+
+/* Ajuste de cards de piedras */
+.card-img {
+  height: 160px;
+  object-fit: cover;
+}
+
+
+/* Ajuste de grupos de piedras, grupos: halloween, variadas, navidad, etc. */
+.img-grupo-container {
+    width: 100%;
+    height: 200px; /* Esta medida es la que iguala todos los recuadros */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff; 
+    border-radius: 15px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+#disenos .card-img-top {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+
+/* Catalogo de precios */
+.img-container {
+  width: 100%;
+  height: 180px;
+  /* Altura fija para todas */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-img-custom {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;  /* Para que la piedra se vea completa sin cortarse */
+}
+
+
+/* BORDE CON DEGRADADO UNIVERSAL para el borde de los precios */
+.borde-gradient {
+  background: white; /* Color de fondo del recuadro */
+  border: 3px solid transparent; /* El borde debe ser transparente para que brille el degradado */
+  border-image: linear-gradient(to right, #FF5733, #33FF57, #3357FF, #F333FF, #FF33A8, #FFD433);
+  border-image-slice: 1; /* Esto hace que el degradado cubra todo el borde */
+  color: #333; /* Texto oscuro para que sea legible */
+  font-weight: bold;
+}
+
+
+/* Ajustes para la sección Cómo Comprar */
+#como-comprar i {
+  transition: transform 0.3s ease;
+}
+
+#como-comprar .col-md-4:hover i {
+  transform: translateY(-10px);
+  /* Los iconos saltan un poquito al pasar el mouse */
+}
+
+/* Ajuste de Footer para pantallas pequeñas */
+@media (max-width: 576px) {
+  footer h3 {
+    font-size: 1.5rem;
+  }
+
+  footer h5 {
+    margin-top: 1.5rem;
+  }
+}
+
+
+/* --- EFECTO HOVER PARA REDES SOCIALES EN EL FOOTER --- */
+
+/* 1. Estilo base para los iconos (asegura una transición suave) */
+footer .d-flex a i {
+  transition: all 0.3s ease;
+  color: white;  /* Color inicial */
+}
+
+/* 2. Color original de Instagram al pasar el mouse */
+footer .d-flex a i.fa-instagram:hover {
+  color: #E1306C;  /* Rosa/Rojo característico de Instagram */
+  transform: scale(1.2);  /* Opcional: crece un 20% para resaltar */
+}
+
+/* 3. Color original de WhatsApp al pasar el mouse */
+footer .d-flex a i.fa-whatsapp:hover {
+  color: #25D366;  /* Verde oficial de WhatsApp */
+  transform: scale(1.2);  /* Opcional: crece un 20% para resaltar */
+}
+
+/* 4. Quitar el subrayado de los enlaces en el hover */
+footer .d-flex a:hover {
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
