@@ -97,7 +97,7 @@
 }
 
 
-/* Ajuste de grupos de piedras, grupos: halloween, variadas, navidad, etc. */
+/* SECCION GRUPOS DE PIEDRAS: halloween, variadas, navidad, etc. */
 .img-grupo-container {
     width: 100%;
     height: 200px; /* Esta medida es la que iguala todos los recuadros */
@@ -120,7 +120,7 @@
 }
 
 
-/* Catalogo de precios */
+/* SECCION CATALOGO DE PRECIOS */
 .img-container {
   width: 100%;
   height: 180px;
@@ -137,7 +137,6 @@
   object-fit: contain;  /* Para que la piedra se vea completa sin cortarse */
 }
 
-
 /* BORDE CON DEGRADADO UNIVERSAL para el borde de los precios */
 .borde-gradient {
   background: white; /* Color de fondo del recuadro */
@@ -149,20 +148,53 @@
 }
 
 
-/* Ajustes para la sección Cómo Comprar */
+/* Color Gris Cálido Suave para el Catálogo */
+.bg-catalogo {
+  background-color: #f5f5f4; /* Un gris cálido, suave y elegante */
+  border-top: 1px solid #e5e5e4;
+  border-bottom: 1px solid #e5e5e4;
+}
+
+/* Opcional: Para que las tarjetas blancas resalten más sobre este fondo */
+.bg-catalogo .card {
+  transition: transform 0.2s ease, shadow 0.2s ease;
+}
+
+.bg-catalogo .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+
+
+/* SECCION COMO COMPRAR */
 #como-comprar i {
   transition: transform 0.3s ease;
 }
 
 #como-comprar .col-md-4:hover i {
-  transform: translateY(-10px);
-  /* Los iconos saltan un poquito al pasar el mouse */
+  transform: translateY(-10px);  /* Los iconos saltan un poquito al pasar el mouse */
 }
+
+/* Color suave para la sección de adquisición */
+.bg-suave {
+    background-color: #fdf8f1; /* Un tono crema/arena muy sutil */
+    border-top: 1px solid #f1ece4; /* Línea casi invisible para separar secciones */
+    border-bottom: 1px solid #f1ece4;
+}
+
+/* Opcional: Dale un toque de color a los títulos de los pasos */
+.bg-suave h4 {
+    color: #4a4a4a;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
 
 /* Ajuste de Footer para pantallas pequeñas */
 @media (max-width: 576px) {
   footer h3 {
-    font-size: 1.5rem;
+    font-size: 1.9rem;
   }
 
   footer h5 {
@@ -195,6 +227,38 @@ footer .d-flex a i.fa-whatsapp:hover {
 footer .d-flex a:hover {
   text-decoration: none;
 }
+
+
+/* --- AJUSTES DE TAMAÑO DE LA LETRA PARA EL FOOTER --- */
+footer p, 
+footer ul li {
+    font-size: 1.1rem; /* Agranda el texto general (antes era muy pequeño) */
+    line-height: 1.6;   /* Da más espacio entre líneas para que no se vea amontonado */
+}
+
+footer h5 {
+    font-size: 1.3rem; /* Agranda los títulos de las columnas (Contacto, Síguenos) */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+/* Ajuste de Footer para pantallas pequeñas (Móviles) */
+@media (max-width: 576px) {
+  footer h3 {
+    font-size: 1.8rem; /* Un poco más grande para que resalte la marca */
+  }
+
+  footer p, 
+  footer ul li {
+    font-size: 1rem; /* En móvil bajamos un poquito para que quepa bien en pantalla */
+  }
+
+  footer h5 {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+}
+
 
 html {
   scroll-behavior: smooth;
