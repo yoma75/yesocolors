@@ -178,16 +178,16 @@
 
 /* Color suave para la sección de adquisición */
 .bg-suave {
-    background-color: #fdf8f1; /* Un tono crema/arena muy sutil */
-    border-top: 1px solid #f1ece4; /* Línea casi invisible para separar secciones */
-    border-bottom: 1px solid #f1ece4;
+  background-color: #fdf8f1; /* Un tono crema/arena muy sutil */
+  border-top: 1px solid #f1ece4; /* Línea casi invisible para separar secciones */
+  border-bottom: 1px solid #f1ece4;
 }
 
 /* Opcional: Dale un toque de color a los títulos de los pasos */
 .bg-suave h4 {
-    color: #4a4a4a;
-    font-weight: bold;
-    margin-top: 15px;
+  color: #4a4a4a;
+  font-weight: bold;
+  margin-top: 15px;
 }
 
 
@@ -261,5 +261,35 @@ footer h5 {
 
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: smooth; /* Esto hace que el scroll sea suave al hacer clic en enlaces de anclaje */
+}
+
+
+/* --- PERSONALIZACIÓN DEL SCROLLBAR (BARRA DE DESPLAZAMIENTO) --- */
+
+/* Tamaño de la barra (el carril por donde baja) */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra */
+}
+
+/* El fondo de la barra (el carril) */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Un gris muy claro para que el color resalte */
+}
+
+/* La pieza que se mueve (el "Thumb" o pulgar) */
+::-webkit-scrollbar-thumb {
+  /* Aquí aplicamos tu degradado universal */
+  background: linear-gradient(to bottom, 
+      #FF5733, #33FF57, #3357FF, #F333FF, #FF33A8, #FFD433);
+  
+  border-radius: 10px; /* Bordes redondeados para que parezca una piedra pulida */
+  border: 2px solid #f1f1f1; /* Un pequeño borde para que respire dentro del carril */
+}
+
+/* Efecto cuando pasas el mouse sobre la barra */
+::-webkit-scrollbar-thumb:hover {
+  /* Al pasar el mouse, el degradado brilla un poco más (opcional) */
+  background: linear-gradient(to bottom, 
+      #FF2E00, #00FF2E, #002EFF, #D400FF, #FF0084, #FFC400);
 }
