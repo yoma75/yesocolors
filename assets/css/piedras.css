@@ -1,3 +1,7 @@
+body {
+  background-color: white;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -81,6 +85,20 @@ body {
 
 .nav-link:hover::after {
   width: 100%;
+}
+
+/* ✅ NUEVO: Estilos para el nav fijo */
+.nav-text {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+#mainNav.scrolled .nav-text {
+  color: #1f2937;
+}
+
+.dark #mainNav.scrolled .nav-text {
+  color: #f3f4f6;
 }
 
 @media (max-width: 768px) {

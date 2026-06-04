@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -33,32 +33,34 @@
 <body
   class="bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 dark:from-gray-900 dark:via-purple-950 dark:to-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-500">
 
+  <!-- ✅ NAV FIJO (sacado del section) -->
+  <nav id="mainNav"
+    class="fixed top-0 left-0 w-full px-4 md:px-8 lg:px-16 py-4 md:py-6 flex items-center justify-between z-50 transition-all duration-300 bg-transparent">
+    <a href="#inicio" class="text-xl md:text-2xl font-extrabold tracking-tight">
+      <img src="./assets/img/logotipo StoneColors.png" alt="Logo" height="40" width="150" height="80">
+    </a>
+    <div
+      class="hidden md:flex items-center gap-8 bg-white/20 dark:bg-black/30 backdrop-blur-md px-6 py-2.5 rounded-full border border-white/30">
+      <a href="#quienes-somos" class="nav-link nav-text font-medium text-sm">Quiénes somos</a>
+      <a href="./index.html" class="nav-link nav-text font-medium text-sm">Figuras de yeso</a>
+      <a href="#comprar" class="nav-link nav-text font-medium text-sm">Comprar</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="themeToggle"
+        class="p-2.5 rounded-full bg-white/20 dark:bg-black/30 backdrop-blur-md text-white border border-white/30 hover:scale-110 transition-transform">
+        <i id="themeIcon" class="fas fa-moon text-sm"></i>
+      </button>
+      <button id="mobileMenuBtn"
+        class="md:hidden p-2.5 rounded-full bg-white/20 dark:bg-black/30 backdrop-blur-md text-white border border-white/30">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+  </nav>
+
   <!-- HERO SECTION -->
   <section id="inicio" class="relative h-screen w-full hero-bg flex flex-col">
-    <nav class="w-full px-4 md:px-8 lg:px-16 py-4 md:py-6 flex items-center justify-between z-20">
-      <a href="#inicio" class="text-xl md:text-2xl font-extrabold tracking-tight">
-        <img src="./assets/img/logotipo StoneColors.png" alt="Logo" height="40" width="150" height="80">
-      </a>
-      <div
-        class="hidden md:flex items-center gap-8 bg-white/20 dark:bg-black/30 backdrop-blur-md px-6 py-2.5 rounded-full border border-white/30">
-        <a href="#quienes-somos" class="nav-link text-white font-medium text-sm">Quiénes somos</a>
-        <a href="./index.html" class="nav-link text-white font-medium text-sm">Figuras de yeso</a>
-        <a href="#comprar" class="nav-link text-white font-medium text-sm">Comprar</a>
-      </div>
-      <div class="flex items-center gap-3">
-        <button id="themeToggle"
-          class="p-2.5 rounded-full bg-white/20 dark:bg-black/30 backdrop-blur-md text-white border border-white/30 hover:scale-110 transition-transform">
-          <i id="themeIcon" class="fas fa-moon text-sm"></i>
-        </button>
-        <button id="mobileMenuBtn"
-          class="md:hidden p-2.5 rounded-full bg-white/20 dark:bg-black/30 backdrop-blur-md text-white border border-white/30">
-          <i class="fas fa-bars"></i>
-        </button>
-      </div>
-    </nav>
-
     <div id="mobileMenu"
-      class="hidden absolute top-20 left-4 right-4 md:hidden bg-white/90 dark:bg-gray-900/95 backdrop-blur-lg rounded-2xl p-6 shadow-2xl border border-white/30 z-30">
+      class="hidden fixed top-20 left-4 right-4 md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg rounded-2xl p-6 shadow-2xl border border-white/30 z-40 max-h-[80vh] overflow-y-auto">
       <a href="#quienes-somos"
         class="block py-3 text-gray-800 dark:text-white font-medium border-b border-gray-200 dark:border-gray-700">Quiénes
         somos</a>
@@ -149,7 +151,8 @@
       <div class="text-center mb-10 md:mb-14">
         <h2 class="text-3xl md:text-5xl font-extrabold mb-4">Nuestras <span class="gradient-colors">Temáticas</span>
         </h2>
-        <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-sm md:text-base">Explora nuestras colecciones
+        <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto text-sm md:text-base">Explora nuestras
+          colecciones
           agrupadas por tema.</p>
       </div>
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -182,7 +185,8 @@
           </div>
           <div class="p-6">
             <h3 class="text-xl md:text-2xl font-bold mb-2">🐶 Animales</h3>
-            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Adorables criaturas pintadas con detalle
+            <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Adorables criaturas pintadas con
+              detalle
               y color.</p>
           </div>
         </div>
@@ -213,7 +217,7 @@
               COLECCIÓN</div>
           </div>
           <div class="p-6">
-            <h3 class="text-xl md:text-2xl font-bold mb-2">👨‍🦳 Personajes</h3>
+            <h3 class="text-xl md:text-2xl font-bold mb-2">👨‍ Personajes</h3>
             <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Diseños de personajes icónicos con
               detalles finos y colores vibrantes.</p>
           </div>
@@ -277,7 +281,8 @@
           <div
             class="inline-block px-5 py-2 bg-gradient-to-r from-purple-500 to-blue-400 text-white rounded-full text-xs md:text-sm font-bold tracking-wider uppercase mb-4">
             DETALLADAS</div>
-          <h2 class="text-3xl md:text-5xl font-extrabold mb-3">Piedras a <span class="gradient-colors">$4.000 COP</span>
+          <h2 class="text-3xl md:text-5xl font-extrabold mb-3">Piedras a <span class="gradient-colors">$ 4.000
+              COP</span>
           </h2>
         </div>
         <div id="container-detalladas" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-8"></div>
@@ -289,7 +294,7 @@
           <div
             class="inline-block px-5 py-2 bg-gradient-to-r from-amber-500 to-pink-500 text-white rounded-full text-xs md:text-sm font-bold tracking-wider uppercase mb-4">
             PREMIUM</div>
-          <h2 class="text-3xl md:text-5xl font-extrabold mb-3">Piedras a <span class="gradient-colors">$4.900 COP
+          <h2 class="text-3xl md:text-5xl font-extrabold mb-3">Piedras a <span class="gradient-colors">$ 4.900 COP
               +</span>
           </h2>
         </div>
@@ -317,7 +322,8 @@
             <i class="fas fa-palette text-3xl text-pink-500"></i>
           </div>
           <h3 class="text-xl font-bold mb-3">Elige tu diseño</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Explora nuestro catálogo y anota el nombre
+          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Explora nuestro catálogo y anota el
+            nombre
             de las piedras que más te gusten.</p>
         </div>
         <div class="relative bg-white dark:bg-gray-800 rounded-3xl p-8 shadow-xl text-center">
@@ -341,7 +347,8 @@
             <i class="fas fa-truck text-3xl text-blue-500"></i>
           </div>
           <h3 class="text-xl font-bold mb-3">Entrega Local</h3>
-          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Acordamos el pago contra entrega en Bogotá
+          <p class="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">Acordamos el pago contra entrega en
+            Bogotá
             o puedes visitarnos en nuestro taller.</p>
         </div>
       </div>
@@ -379,7 +386,8 @@
                   class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
             </div>
           </div>
-          <p class="text-gray-600 dark:text-gray-300 text-sm italic">"Excelente calidad y muy buena atención. La entrega
+          <p class="text-gray-600 dark:text-gray-300 text-sm italic">"Excelente calidad y muy buena atención. La
+            entrega
             fue rápida en Bogotá."</p>
         </div>
         <div class="bg-white dark:bg-gray-800 rounded-3xl p-6 md:p-8 shadow-lg">
@@ -392,7 +400,8 @@
                   class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
             </div>
           </div>
-          <p class="text-gray-600 dark:text-gray-300 text-sm italic">"Hermoso trabajo artesanal. Las piedras abstractas
+          <p class="text-gray-600 dark:text-gray-300 text-sm italic">"Hermoso trabajo artesanal. Las piedras
+            abstractas
             quedaron perfectas en mi refrigerador."</p>
         </div>
       </div>
@@ -413,28 +422,29 @@
         </p>
       </div>
 
-      <!-- Formulario -->
-      <form id="contactForm" class="bg-white dark:bg-gray-800 rounded-3xl p-6 md:p-8 shadow-xl space-y-4">
+      <!-- ✅ Formulario con Formspree -->
+      <form id="contactForm" action="https://formspree.io/f/xgedpglj" method="POST"
+        class="bg-white dark:bg-gray-800 rounded-3xl p-6 md:p-8 shadow-xl space-y-4">
         <div class="grid sm:grid-cols-2 gap-4">
           <div>
             <label class="block text-xs font-bold mb-1.5 text-gray-700 dark:text-gray-300">Nombre</label>
-            <input type="text" id="nombre" required
+            <input type="text" id="nombre" name="nombre" required
               class="w-full px-4 py-3 bg-pink-50 dark:bg-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400 transition text-sm">
           </div>
           <div>
             <label class="block text-xs font-bold mb-1.5 text-gray-700 dark:text-gray-300">Apellido</label>
-            <input type="text" id="apellido" required
+            <input type="text" id="apellido" name="apellido" required
               class="w-full px-4 py-3 bg-pink-50 dark:bg-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400 transition text-sm">
           </div>
         </div>
         <div>
           <label class="block text-xs font-bold mb-1.5 text-gray-700 dark:text-gray-300">Correo electrónico</label>
-          <input type="email" id="correo" required
+          <input type="email" id="correo" name="correo" required
             class="w-full px-4 py-3 bg-pink-50 dark:bg-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400 transition text-sm">
         </div>
         <div>
           <label class="block text-xs font-bold mb-1.5 text-gray-700 dark:text-gray-300">Mensaje / Pedido</label>
-          <textarea id="mensaje" rows="6" required
+          <textarea id="mensaje" name="mensaje" rows="6" required
             class="w-full px-4 py-3 bg-pink-50 dark:bg-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-pink-400 transition text-sm resize-none"></textarea>
           <p class="text-xs text-gray-500 dark:text-gray-400 mt-1"><i class="fas fa-info-circle"></i> Las piedras
             seleccionadas aparecen aquí automáticamente.</p>
@@ -505,28 +515,65 @@
   <script>
     // ==========================================
     // BASE DE DATOS DE PIEDRAS (Fácil de expandir)
-    // Agrega aquí tus 90+ piedras copiando el formato:
-    // { nombre: "Nombre", codigo: "SC-XXX", precio: 1500, categoria: "basicas" | "detalladas" | "premium", imagen: "url", filtro: "hue-rotate-90" (opcional) }
     // ==========================================
     const piedras = [
-      // BÁSICAS ($1.500)
-      { nombre: "Gatito Rosado", codigo: "SC-001", precio: 1500, categoria: "basicas", imagen: "https://image.qwenlm.ai/public_source/d69831c6-d0ad-4a9f-9840-512863663469/156bcdc68-4fd5-477e-b2ea-89b01ec8806b.png" },
-      { nombre: "Corazón Dulce", codigo: "SC-002", precio: 1500, categoria: "basicas", imagen: "https://image.qwenlm.ai/public_source/d69831c6-d0ad-4a9f-9840-512863663469/156bcdc68-4fd5-477e-b2ea-89b01ec8806b.png", filtro: "hue-rotate-90" },
-      { nombre: "Flor Silvestre", codigo: "SC-003", precio: 1500, categoria: "basicas", imagen: "https://image.qwenlm.ai/public_source/d69831c6-d0ad-4a9f-9840-512863663469/156bcdc68-4fd5-477e-b2ea-89b01ec8806b.png", filtro: "hue-rotate-180" },
-      { nombre: "Mariposa Azul", codigo: "SC-004", precio: 1500, categoria: "basicas", imagen: "https://image.qwenlm.ai/public_source/d69831c6-d0ad-4a9f-9840-512863663469/156bcdc68-4fd5-477e-b2ea-89b01ec8806b.png", filtro: "hue-rotate-270" },
+      // BÁSICAS ($3.000)
+      { nombre: "Pato", codigo: "SC-001", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra1.png" },
+      { nombre: "Tiburon", codigo: "SC-002", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra2.png" },
+      { nombre: "Ave", codigo: "SC-003", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra3.png" },
+      { nombre: "Pollito 1", codigo: "SC-004", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra4.png" },
+      { nombre: "Pollito 2", codigo: "SC-005", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra5.png" },
+      { nombre: "Mariquita", codigo: "SC-006", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra6.png" },
+      { nombre: "Pollito Cascara", codigo: "SC-007", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra7.png" },
+      { nombre: "Angry Bird Blue", codigo: "SC-008", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra8.png" },
+      { nombre: "Angry Bird Yellow", codigo: "SC-009", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra9.png" },
+      { nombre: "Papa Noel 1", codigo: "SC-010", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra10.png" },
+      { nombre: "Papa Noel 2", codigo: "SC-011", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra11.png" },
+      { nombre: "Bob Esponja 1", codigo: "SC-012", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra12.png" },
+      { nombre: "Bob Esponja 2", codigo: "SC-013", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra13.png" },
+      { nombre: "Carita Nieve", codigo: "SC-014", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra14.png" },
+      { nombre: "Fantasma Calabaza", codigo: "SC-015", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra15.png" },
+      { nombre: "Nomo 1", codigo: "SC-016", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra16.png" },
+      { nombre: "Carita Black", codigo: "SC-017", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra17.png" },
+      { nombre: "Hongo Bross", codigo: "SC-018", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra18.png" },
+      { nombre: "PacMan 1", codigo: "SC-019", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra19.png" },
+      { nombre: "Niño Nieve", codigo: "SC-020", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra20.png" },
+      { nombre: "Frank", codigo: "SC-021", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra21.png" },
+      { nombre: "M y M Red", codigo: "SC-022", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra22.png" },
+      { nombre: "M y M Green", codigo: "SC-023", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra23.png" },
+      { nombre: "Niño Pirata", codigo: "SC-024", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra24.png" },
+      { nombre: "Carita fantasma", codigo: "SC-025", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra25.png" },
+      { nombre: "Emoji 1", codigo: "SC-026", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra26.png" },
+      { nombre: "Patricio", codigo: "SC-043", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra43.png" },
+      { nombre: "Papa Noel 5", codigo: "SC-044", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra44.png" },
+      { nombre: "Pan Frances", codigo: "SC-045", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra45.png" },
+      { nombre: "Faro", codigo: "SC-050", precio: 3000, categoria: "basicas", imagen: "./assets/img/imgCatalogo/piedra50.png" },
 
       // DETALLADAS ($4.000)
-      { nombre: "Lobo Salvaje", codigo: "SC-101", precio: 4000, categoria: "detalladas", imagen: "https://image.qwenlm.ai/public_source/d69831c6-d0ad-4a9f-9840-512863663469/1b2ddcdc9-f7dc-4c21-8aec-1a9df437188a.png" },
-      { nombre: "Zorro del Bosque", codigo: "SC-102", precio: 4000, categoria: "detalladas", imagen: "https://image.qwenlm.ai/public_source/d69831c6-d0ad-4a9f-9840-512863663469/1b2ddcdc9-f7dc-4c21-8aec-1a9df437188a.png", filtro: "hue-rotate-60" },
-      { nombre: "Familia Canina", codigo: "SC-103", precio: 4000, categoria: "detalladas", imagen: "https://image.qwenlm.ai/public_source/d69831c6-d0ad-4a9f-9840-512863663469/1b2ddcdc9-f7dc-4c21-8aec-1a9df437188a.png", filtro: "hue-rotate-120" },
-      { nombre: "Búho Nocturno", codigo: "SC-104", precio: 4000, categoria: "detalladas", imagen: "https://image.qwenlm.ai/public_source/d69831c6-d0ad-4a9f-9840-512863663469/1b2ddcdc9-f7dc-4c21-8aec-1a9df437188a.png", filtro: "hue-rotate-180" },
+      { nombre: "Automovil", codigo: "SC-027", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra27.png" },
+      { nombre: "Casa Fantasma", codigo: "SC-028", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra28.png" },
+      { nombre: "Brasier", codigo: "SC-029", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra29.png" },
+      { nombre: "Papa Noel 4", codigo: "SC-030", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra30.png" },
+      { nombre: "Monster 1", codigo: "SC-031", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra31.png" },
+      { nombre: "Hamburguesa", codigo: "SC-032", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra32.png" },
+      { nombre: "AB Yellow", codigo: "SC-033", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra33.png" },
+      { nombre: "AB Red", codigo: "SC-034", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra34.png" },
+      { nombre: "Niña Corazones", codigo: "SC-035", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra35.png" },
+      { nombre: "Pirata", codigo: "SC-036", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra36.png" },
+      { nombre: "Sandalia", codigo: "SC-037", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra37.png" },
+      { nombre: "Zombie Chic", codigo: "SC-038", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra38.png" },
+      { nombre: "Dedo Humano", codigo: "SC-039", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra39.png" },
+      { nombre: "Dedo Bruja", codigo: "SC-040", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra40.png" },
+      { nombre: "Nomo 2", codigo: "SC-041", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra41.png" },
+      { nombre: "Vampiro", codigo: "SC-042", precio: 4000, categoria: "detalladas", imagen: "./assets/img/imgCatalogo/piedra42.png" },
 
       // PREMIUM ($4.900)
-      { nombre: "Ondas Cósmicas", codigo: "SC-201", precio: 4900, categoria: "premium", imagen: "https://image.qwenlm.ai/public_source/d69831c6-d0ad-4a9f-9840-512863663469/1dc167daa-b878-456a-89f4-cf24b5c17054.png" },
-      { nombre: "Torbellino Místico", codigo: "SC-202", precio: 4900, categoria: "premium", imagen: "https://image.qwenlm.ai/public_source/d69831c6-d0ad-4a9f-9840-512863663469/1dc167daa-b878-456a-89f4-cf24b5c17054.png", filtro: "hue-rotate-90" },
-      { nombre: "Galaxia Interior", codigo: "SC-203", precio: 4900, categoria: "premium", imagen: "https://image.qwenlm.ai/public_source/d69831c6-d0ad-4a9f-9840-512863663469/1dc167daa-b878-456a-89f4-cf24b5c17054.png", filtro: "hue-rotate-180" },
-      { nombre: "Nebulosa Dorada", codigo: "SC-204", precio: 4900, categoria: "premium", imagen: "https://image.qwenlm.ai/public_source/d69831c6-d0ad-4a9f-9840-512863663469/1dc167daa-b878-456a-89f4-cf24b5c17054.png", filtro: "hue-rotate-270" }
-      // ... COPIA Y PEGA MÁS LÍNEAS AQUÍ PARA TUS 90+ PIEDRAS
+      { nombre: "Promo 1", codigo: "SC-046", precio: 4900, categoria: "premium", imagen: "./assets/img/imgCatalogo/piedra46.png" },
+      { nombre: "Monster Glass", codigo: "SC-047", precio: 4900, categoria: "premium", imagen: "./assets/img/imgCatalogo/piedra47.png" },
+      { nombre: "Bob Esponja 4", codigo: "SC-048", precio: 4900, categoria: "premium", imagen: "./assets/img/imgCatalogo/piedra48.png" },
+      { nombre: "Doctor", codigo: "SC-049", precio: 4900, categoria: "premium", imagen: "./assets/img/imgCatalogo/piedra49.png" },
+      { nombre: "Promo 2", codigo: "SC-051", precio: 4900, categoria: "premium", imagen: "./assets/img/imgCatalogo/piedra51.png" },
+      { nombre: "Sandwich", codigo: "SC-052", precio: 4900, categoria: "premium", imagen: "./assets/img/imgCatalogo/piedra52.png" }
     ];
 
     // Renderizar piedras dinámicamente
@@ -543,12 +590,12 @@
         card.dataset.name = piedra.nombre;
         card.dataset.code = piedra.codigo;
 
-        const hoverColor = piedra.precio === 1500 ? 'hover:border-pink-300 dark:hover:border-pink-600' :
+        const hoverColor = piedra.precio === 3000 ? 'hover:border-pink-300 dark:hover:border-pink-600' :
           piedra.precio === 4000 ? 'hover:border-purple-300 dark:hover:border-purple-600' :
             'hover:border-amber-300 dark:hover:border-amber-600';
         card.classList.add(...hoverColor.split(' '));
 
-        const btnGradient = piedra.precio === 1500 ? 'from-pink-500 to-purple-500' :
+        const btnGradient = piedra.precio === 3000 ? 'from-pink-500 to-purple-500' :
           piedra.precio === 4000 ? 'from-purple-500 to-blue-500' :
             'from-amber-500 to-pink-500';
 
@@ -561,7 +608,7 @@
           <h3 class="font-bold text-lg mb-1">${piedra.nombre}</h3>
           <p class="text-xs text-gray-500 dark:text-gray-400 mb-3 font-mono">Código: ${piedra.codigo}</p>
           <div class="flex items-center justify-between">
-            <span class="text-xl md:text-2xl font-black gradient-colors">$${piedra.precio.toLocaleString('es-CO')}</span>
+            <span class="text-xl md:text-2xl font-black gradient-colors">$ ${piedra.precio.toLocaleString('es-CO')}</span>
             <button onclick="addToCart('${piedra.nombre}', '${piedra.codigo}', ${piedra.precio})" class="px-4 py-2 bg-gradient-to-r ${btnGradient} text-white text-sm font-bold rounded-full hover:scale-105 transition-transform shadow-md">
               Comprar
             </button>
@@ -620,14 +667,31 @@
       msgField.value = msg;
     }
 
-    document.getElementById('contactForm').addEventListener('submit', (e) => {
+    // ✅ Formulario con Formspree (envío con fetch)
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
       e.preventDefault();
+      const form = e.target;
       const nombre = document.getElementById('nombre').value;
       const apellido = document.getElementById('apellido').value;
-      showToast(`¡Gracias ${nombre} ${apellido}! Tu mensaje ha sido enviado.`, 'success');
-      e.target.reset();
-      cart = [];
-      updateFloatingButton();
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          showToast(`¡Gracias ${nombre} ${apellido}! Tu mensaje ha sido enviado.`, 'success');
+          form.reset();
+          cart = [];
+          updateFloatingButton();
+        } else {
+          showToast('Hubo un error al enviar. Intenta de nuevo.', 'info');
+        }
+      } catch (error) {
+        showToast('Error de conexión. Intenta de nuevo.', 'info');
+      }
     });
 
     function showToast(message, type) {
@@ -665,7 +729,7 @@
           <div>
             <div class="font-bold text-sm">${p.nombre}</div>
             <div class="text-xs text-gray-500 dark:text-gray-300 font-mono">${p.codigo}</div>
-            <div class="text-sm font-black gradient-colors">$${p.precio.toLocaleString('es-CO')}</div>
+            <div class="text-sm font-black gradient-colors">$ ${p.precio.toLocaleString('es-CO')}</div>
           </div>
           <button onclick="addToCart('${p.nombre}', '${p.codigo}', ${p.precio})" class="px-3 py-2 bg-gradient-to-r from-pink-500 to-purple-500 text-white text-xs font-bold rounded-full hover:scale-105 transition-transform shadow-md flex-shrink-0">Comprar</button>
         </div>
@@ -697,6 +761,19 @@
     const mobileMenu = document.getElementById('mobileMenu');
     mobileMenuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
     mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => mobileMenu.classList.add('hidden')));
+
+    // ✅ Nav fijo con cambio de fondo al hacer scroll
+    const mainNav = document.getElementById('mainNav');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 80) {
+        mainNav.classList.add('bg-white/80', 'dark:bg-gray-900/80', 'backdrop-blur-md', 'shadow-md', 'scrolled');
+        mainNav.classList.remove('bg-transparent');
+      } else {
+        mainNav.classList.remove('bg-white/80', 'dark:bg-gray-900/80', 'backdrop-blur-md', 'shadow-md', 'scrolled');
+        mainNav.classList.add('bg-transparent');
+      }
+    });
 
     // Animación al scroll
     const observer = new IntersectionObserver((entries) => {
