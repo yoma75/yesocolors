@@ -1,295 +1,90 @@
-/* CLASE UNIVERSAL DE DEGRADADO palabra COLORS */
-.efecto-colors {
-  background: linear-gradient(to right,
-      #FF5733, #33FF57, #3357FF, #F333FF, #FF33A8, #FFD433);
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+.gradient-colors {
+  background: linear-gradient(90deg, #ff6b6b 0%, #feca57 20%, #48dbfb 40%, #f093e4 60%, #54a0ff 80%, #5f27cd 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
   color: transparent;
+  background-size: 300% 100%;
+  animation: gradient-shift 5s ease infinite;
   display: inline-block;
-  /* Importante para que el degradado se ajuste bien al texto */
-  font-weight: bold;
 }
 
-/* --- NUEVA CLASE UNIVERSAL CON BORDE DEGRADADO CAFÉ palabra STONE --- */
-.efecto-stone {
-  position: relative;  /* Necesario para posicionar el borde por debajo */
-  display: inline-block;  /* Importante para el posicionamiento */
-  font-weight: bold;
-  color: transparent;  /* El texto real es transparente para ver el degradado interior */
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
 }
 
-/* 1. Definimos el degradado de FONDO de las letras (color piedra) */
-.efecto-stone {
-  background: linear-gradient(to right,
-      #a6a6a6,      /* Gris claro */
-      #d9ccb9,      /* Beige suave */
-      #a6a6a6      /* Gris claro */
-    );
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;  /* Duplicado para compatibilidad */
+.hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/piedrasHero.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-/* Creamos el BORDE DEGRADADO CAFÉ usando un duplicado del texto (::after) */
-.efecto-stone::after {
-  content: attr(data-text);  /* Mágica: Copiamos el texto real de STONE */
+.dark .hero-bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/piedrasHero.png');
+}
+
+.stone-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stone-card:hover {
+  transform: translateY(-8px);
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nav-link {
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
   position: absolute;
-  top: 0;
+  bottom: -4px;
   left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #ff6b6b, #48dbfb, #ff9ff3);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
   width: 100%;
-  height: 100%;
-  z-index: -1;  /* Posicionamos el borde POR DETRÁS del texto real */
-
-  /* Definimos el degradado de café oscuro para el BORDE */
-  background: linear-gradient(to right,
-      #4a3a2a,      /* Café oscuro moka */
-      #654a3a,      /* Café nogal */
-      #4a3a2a       /* Volvemos al moka */
-    );
-
-  /* Recortamos el fondo degradado para que solo se vea DENTRO del duplicado */
-  -webkit-background-clip: text;
-  background-clip: text;
-
-  /* Hacemos que el color del duplicado sea transparente para ver el degradado */
-  -webkit-text-fill-color: transparent;
-
-  /* Mágica del Borde: Usamos 'text-stroke' para crear el contorno real */
-  -webkit-text-stroke: 2.9px;  /* Definimos el grosor del borde */
 }
 
-/* Toque Final: Agregamos una sombra suave para separarlo aún más del fondo */
-.efecto-stone {
-  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);  /* Sombra suave hacia abajo */
-}
-
-
-/* Hero full screen con imagen de fondo */
-.hero-section {
-  height: 100vh;
-  background: linear-gradient(rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0.134)),
-    url('../img/piedrasHero.png') no-repeat center center/cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.main-title {
-  font-size: clamp(2.5rem, 10vw, 5.5rem);
-  letter-spacing: 10px;
-  font-weight: 800;
-  color: #333;
-}
-
-.custom-divider {
-  width: 100%;
-  max-width: 650px;
-  height: 5px;
-  background-color: #735050d8;
-}
-
-/* Ajuste de cards de piedras */
-.card-img {
-  height: 160px;
-  object-fit: cover;
-}
-
-
-/* SECCION GRUPOS DE PIEDRAS: halloween, variadas, navidad, etc. */
-.img-grupo-container {
-    width: 100%;
-    height: 200px; /* Esta medida es la que iguala todos los recuadros */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff; 
-    border-radius: 15px;
-    overflow: hidden;
-    padding: 15px;
-}
-
-#disenos .card-img-top {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    margin: 0 auto;
-}
-
-
-/* SECCION CATALOGO DE PRECIOS */
-.img-container {
-  width: 100%;
-  height: 180px;
-  /* Altura fija para todas */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-
-.card-img-custom {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;  /* Para que la piedra se vea completa sin cortarse */
-}
-
-/* BORDE CON DEGRADADO UNIVERSAL para el borde de los precios */
-.borde-gradient {
-  background: white; /* Color de fondo del recuadro */
-  border: 3px solid transparent; /* El borde debe ser transparente para que brille el degradado */
-  border-image: linear-gradient(to right, #FF5733, #33FF57, #3357FF, #F333FF, #FF33A8, #FFD433);
-  border-image-slice: 1; /* Esto hace que el degradado cubra todo el borde */
-  color: #333; /* Texto oscuro para que sea legible */
-  font-weight: bold;
-}
-
-
-/* Color Gris Cálido Suave para el Catálogo */
-.bg-catalogo {
-  background-color: #f5f5f4; /* Un gris cálido, suave y elegante */
-  border-top: 1px solid #e5e5e4;
-  border-bottom: 1px solid #e5e5e4;
-}
-
-/* Opcional: Para que las tarjetas blancas resalten más sobre este fondo */
-.bg-catalogo .card {
-  transition: transform 0.2s ease, shadow 0.2s ease;
-}
-
-.bg-catalogo .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
-}
-
-
-
-/* SECCION COMO COMPRAR */
-#como-comprar i {
-  transition: transform 0.3s ease;
-}
-
-#como-comprar .col-md-4:hover i {
-  transform: translateY(-10px);  /* Los iconos saltan un poquito al pasar el mouse */
-}
-
-/* Color suave para la sección de adquisición */
-.bg-suave {
-  background-color: #fdf8f1; /* Un tono crema/arena muy sutil */
-  border-top: 1px solid #f1ece4; /* Línea casi invisible para separar secciones */
-  border-bottom: 1px solid #f1ece4;
-}
-
-/* Opcional: Dale un toque de color a los títulos de los pasos */
-.bg-suave h4 {
-  color: #4a4a4a;
-  font-weight: bold;
-  margin-top: 15px;
-}
-
-
-/* Ajuste de Footer para pantallas pequeñas */
-@media (max-width: 576px) {
-  footer h3 {
-    font-size: 1.9rem;
+@media (max-width: 768px) {
+  .hero-bg {
+    background-attachment: scroll;
   }
-
-  footer h5 {
-    margin-top: 1.5rem;
-  }
-}
-
-
-/* --- EFECTO HOVER PARA REDES SOCIALES EN EL FOOTER --- */
-
-/* 1. Estilo base para los iconos (asegura una transición suave) */
-footer .d-flex a i {
-  transition: all 0.3s ease;
-  color: white;  /* Color inicial */
-}
-
-/* 2. Color original de Instagram al pasar el mouse */
-footer .d-flex a i.fa-instagram:hover {
-  color: #E1306C;  /* Rosa/Rojo característico de Instagram */
-  transform: scale(1.2);  /* Opcional: crece un 20% para resaltar */
-}
-
-/* 3. Color original de WhatsApp al pasar el mouse */
-footer .d-flex a i.fa-whatsapp:hover {
-  color: #25D366;  /* Verde oficial de WhatsApp */
-  transform: scale(1.2);  /* Opcional: crece un 20% para resaltar */
-}
-
-/* 4. Quitar el subrayado de los enlaces en el hover */
-footer .d-flex a:hover {
-  text-decoration: none;
-}
-
-
-/* --- AJUSTES DE TAMAÑO DE LA LETRA PARA EL FOOTER --- */
-footer p, 
-footer ul li {
-    font-size: 1.1rem; /* Agranda el texto general (antes era muy pequeño) */
-    line-height: 1.6;   /* Da más espacio entre líneas para que no se vea amontonado */
-}
-
-footer h5 {
-    font-size: 1.3rem; /* Agranda los títulos de las columnas (Contacto, Síguenos) */
-    font-weight: bold;
-    margin-bottom: 1rem;
-}
-
-/* Ajuste de Footer para pantallas pequeñas (Móviles) */
-@media (max-width: 576px) {
-  footer h3 {
-    font-size: 1.8rem; /* Un poco más grande para que resalte la marca */
-  }
-
-  footer p, 
-  footer ul li {
-    font-size: 1rem; /* En móvil bajamos un poquito para que quepa bien en pantalla */
-  }
-
-  footer h5 {
-    margin-top: 2rem;
-    font-size: 1.2rem;
-  }
-}
-
-
-html {
-  scroll-behavior: smooth; /* Esto hace que el scroll sea suave al hacer clic en enlaces de anclaje */
-}
-
-
-/* --- PERSONALIZACIÓN DEL SCROLLBAR (BARRA DE DESPLAZAMIENTO) --- */
-
-/* Tamaño de la barra (el carril por donde baja) */
-::-webkit-scrollbar {
-  width: 12px; /* Ancho de la barra */
-}
-
-/* El fondo de la barra (el carril) */
-::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Un gris muy claro para que el color resalte */
-}
-
-/* La pieza que se mueve (el "Thumb" o pulgar) */
-::-webkit-scrollbar-thumb {
-  /* Aquí aplicamos tu degradado universal */
-  background: linear-gradient(to bottom, 
-      #FF5733, #33FF57, #3357FF, #F333FF, #FF33A8, #FFD433);
-  
-  border-radius: 10px; /* Bordes redondeados para que parezca una piedra pulida */
-  border: 2px solid #f1f1f1; /* Un pequeño borde para que respire dentro del carril */
-}
-
-/* Efecto cuando pasas el mouse sobre la barra */
-::-webkit-scrollbar-thumb:hover {
-  /* Al pasar el mouse, el degradado brilla un poco más (opcional) */
-  background: linear-gradient(to bottom, 
-      #FF2E00, #00FF2E, #002EFF, #D400FF, #FF0084, #FFC400);
 }
