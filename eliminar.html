@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YesoColors - Figuras de Yeso Pintadas</title>
+  <meta name="author" content="Fredy Colorado">
+  <meta name="description" content="figuras de yeso pintadas con pintura acrilica">
+  <meta name="keywords"
+    content="yeso, figuras, pintura, acrilica, barniz, Figuras de yeso pintadas, Figuras decorativas de yeso">
+  <link rel="icon" href="./assets/img/logoSF7.png" type="image/x-icon">
+  <meta name="google-adsense-account" content="ca-pub-8822144169928578">
+  <meta name="google-site-verification" content="CZe9nOZo5gg_veFZpVhiJEtPHJlw6Z_qsVp8KaAitws">
+  <link rel="canonical" href="https://yesocolors.com/">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/inter@5.1.0/latin.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            coral: '#FF6B6B',
+            mint: '#4ECDC4',
+            lavender: '#A78BFA',
+            peach: '#FDBA74',
+            sky: '#7DD3FC',
+            rose: '#FB7185'
+          }
+        }
+      }
+    };
+  </script>
+</head>
+
+<body
+  class="bg-gradient-to-br from-rose-50 via-sky-50 to-lavender-50 dark:from-gray-900 dark:via-purple-950 dark:to-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-500">
+
+  <nav id="mainNav"
+    class="fixed top-0 left-0 w-full px-4 md:px-8 lg:px-16 py-3 md:py-4 flex items-center justify-between z-50 transition-all duration-300 bg-transparent">
+    <a href="#" class="text-xl md:text-2xl font-extrabold tracking-tight">
+      <img src="./assets/img/logoPagina2.png" alt="Logo" class="h-16 md:h-20 w-auto">
+    </a>
+    <div
+      class="hidden md:flex items-center gap-6 bg-white/20 dark:bg-black/30 backdrop-blur-md px-6 py-2.5 rounded-full border border-white/30">
+      <a href="vendidas.html" class="nav-link nav-text font-medium text-sm">Vendidas</a>
+      <a href="piedras.html" class="nav-link nav-text font-medium text-sm">Piedras imantadas</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <button id="themeToggle"
+        class="theme-btn p-2.5 rounded-full backdrop-blur-md border border-white/30 hover:scale-110 transition-transform"
+        aria-label="Cambiar tema">
+        <i id="themeIcon" class="fas fa-moon text-sm"></i>
+      </button>
+      <button id="mobileMenuBtn" class="theme-btn md:hidden p-2.5 rounded-full backdrop-blur-md border border-white/30"
+        aria-label="Menú">
+        <i class="fas fa-bars text-sm"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div id="mobileMenu"
+    class="hidden fixed top-20 left-4 right-4 md:hidden bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg rounded-2xl p-6 shadow-2xl border border-white/30 z-40">
+    <a href="vendidas.html"
+      class="block py-3 text-gray-800 dark:text-white font-medium border-b border-gray-200 dark:border-gray-700">Vendidas</a>
+    <a href="piedras.html" class="block py-3 text-gray-800 dark:text-white font-medium">Piedras imantadas</a>
+  </div>
+
+  <section class="relative h-screen w-full hero-bg flex items-center justify-center">
+    <div class="hero-content bg-black/40 text-white p-6 md:p-10 rounded-2xl max-w-4xl mx-4 text-center fade-in">
+      <h1 class="text-4xl md:text-6xl lg:text-7xl font-black tracking-tight mb-4">
+        Bienvenido a Yeso<span class="efecto-colors">Colors</span>
+      </h1>
+      <p class="text-lg md:text-xl font-light">Arte en yeso pintado a mano con pasión y color</p>
+    </div>
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-white animate-bounce">
+      <i class="fas fa-chevron-down text-2xl"></i>
+    </div>
+  </section>
+
+  <section class="py-12 md:py-16 px-4">
+    <h2 class="text-3xl md:text-5xl font-extrabold text-center mb-3">FIGURAS DE YESO</h2>
+    <h5 class="text-center text-gray-600 dark:text-gray-400 mb-2 text-sm md:text-base">en pinturas acrílicas y
+      terminadas con barniz brillante</h5>
+    <p class="text-center text-gray-500 dark:text-gray-500 text-xs md:text-sm">Aumenta el zoom de la imagen dando un
+      clic sobre ella</p>
+  </section>
+
+  <section id="buscar" class="px-4 md:px-8 mb-12">
+    <div
+      class="max-w-4xl mx-auto bg-white dark:bg-gray-800 rounded-3xl shadow-xl p-6 md:p-8 border border-rose-100 dark:border-gray-700">
+      <div class="text-center mb-6">
+        <h2 class="text-2xl md:text-3xl font-bold mb-2">🔍 Buscar figuras</h2>
+        <p class="text-gray-500 dark:text-gray-400 text-sm">Encuentra tu figura favorita por nombre o código</p>
+      </div>
+      <div class="relative">
+        <input id="searchInput" type="text" placeholder="Busca por nombre (ej: Cristo) o código (ej: F1)..."
+          class="w-full pl-12 pr-6 py-4 md:py-5 bg-rose-50 dark:bg-gray-700 rounded-2xl focus:outline-none focus:ring-4 focus:ring-rose-200 dark:focus:ring-lavender-500 transition text-base md:text-lg">
+        <i class="fas fa-search absolute left-4 top-1/2 -translate-y-1/2 text-rose-400 text-lg"></i>
+      </div>
+      <div id="searchResults" class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 hidden"></div>
+    </div>
+  </section>
+
+  <section class="px-4 md:px-8 pb-16">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="gallery">
+    </div>
+  </section>
+
+  <section id="registro"
+    class="px-4 md:px-8 py-12 md:py-16 bg-gradient-to-br from-rose-100/50 via-sky-100/50 to-lavender-100/50 dark:bg-black/20">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 md:gap-12">
+      <div>
+        <h5 class="text-center text-xl md:text-2xl font-bold pb-6">Nuestra Ubicación</h5>
+        <div class="bg-white dark:bg-gray-800 rounded-3xl shadow-2xl overflow-hidden p-2 md:p-4">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7953.024039950657!2d-74.11306559154308!3d4.680696751343379!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2sco!4v1742865779158!5m2!1ses-419!2sco"
+            width="100%" height="400" style="border:0; border-radius: 1.5rem;" allowfullscreen=""
+            loading="lazy"></iframe>
+        </div>
+      </div>
+      <div id="formulario">
+        <h5 class="text-center text-xl md:text-2xl font-bold pb-6">¿Deseas comprar o registrarte?</h5>
+        <form id="form" action="https://formspree.io/f/xgedpglj" method="POST"
+          class="bg-white dark:bg-gray-800 rounded-3xl p-6 md:p-8 shadow-xl space-y-4">
+          <div class="grid sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold mb-1.5 text-gray-700 dark:text-gray-300">Nombre</label>
+              <input name="nombre" type="text" id="nombre" required
+                class="w-full px-4 py-3 bg-rose-50 dark:bg-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-400 transition text-sm">
+            </div>
+            <div>
+              <label class="block text-xs font-bold mb-1.5 text-gray-700 dark:text-gray-300">Apellido</label>
+              <input name="apellido" type="text" id="apellido" required
+                class="w-full px-4 py-3 bg-rose-50 dark:bg-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-400 transition text-sm">
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs font-bold mb-1.5 text-gray-700 dark:text-gray-300">Correo Electrónico</label>
+            <input name="correo" type="email" id="correo" required
+              class="w-full px-4 py-3 bg-rose-50 dark:bg-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-400 transition text-sm">
+          </div>
+          <div>
+            <label class="block text-xs font-bold mb-1.5 text-gray-700 dark:text-gray-300">Mensaje / Pedido</label>
+            <textarea name="mensaje" id="mensaje" rows="5"
+              class="w-full px-4 py-3 bg-rose-50 dark:bg-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-rose-400 transition text-sm resize-none"></textarea>
+            <p class="text-xs text-gray-500 dark:text-gray-400 mt-1"><i class="fas fa-info-circle"></i> Las figuras
+              seleccionadas aparecen aquí automáticamente.</p>
+          </div>
+          <button type="submit"
+            class="w-full py-3.5 bg-gradient-to-r from-coral to-lavender text-white font-bold rounded-xl hover:scale-[1.02] transition-transform shadow-lg text-sm">
+            Comprar o Registrarse <i class="fas fa-paper-plane ml-2"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <button id="finishPurchaseBtn" onclick="togglePurchaseMenu()"
+    class="fixed bottom-24 right-6 z-40 hidden bg-gradient-to-r from-coral to-lavender text-white px-6 py-3.5 rounded-full shadow-2xl font-bold text-sm md:text-base hover:scale-105 hover:shadow-rose-500/30 transition-all flex items-center gap-2 border border-white/20 backdrop-blur-sm">
+    <i class="fas fa-shopping-bag"></i>
+    <span>Terminar compra</span>
+    <span id="cartCount" class="bg-white text-lavender text-xs font-black px-2 py-0.5 rounded-full">0</span>
+  </button>
+
+  <div id="purchaseMenu" class="fixed bottom-40 right-6 z-40 hidden flex-col gap-3">
+    <button onclick="sendToWhatsApp()"
+      class="bg-green-500 hover:bg-green-600 text-white px-5 py-3 rounded-full shadow-xl font-bold text-sm flex items-center gap-2 hover:scale-105 transition-all border border-white/20 w-full justify-center">
+      <i class="fab fa-whatsapp text-lg"></i>
+      <span>Enviar por WhatsApp</span>
+    </button>
+    <button onclick="scrollToForm()"
+      class="bg-gradient-to-r from-coral to-lavender hover:scale-105 text-white px-5 py-3 rounded-full shadow-xl font-bold text-sm flex items-center gap-2 transition-all border border-white/20 w-full justify-center">
+      <i class="fas fa-envelope"></i>
+      <span>Enviar por formulario</span>
+    </button>
+  </div>
+
+  <a href="https://wa.me/573118033646" target="_blank"
+    class="fixed bottom-6 right-6 z-40 w-14 h-14 md:w-16 md:h-16 bg-green-500 rounded-full flex items-center justify-center text-white shadow-2xl hover:scale-110 transition-transform animate-pulse"
+    aria-label="WhatsApp">
+    <i class="fab fa-whatsapp text-3xl"></i>
+  </a>
+
+  <footer
+    class="bg-gradient-to-r from-purple-900 via-rose-900 to-purple-900 dark:from-gray-950 dark:via-black dark:to-gray-950 text-white py-10 md:py-14 px-4 md:px-8">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="text-center md:text-left">
+          <div class="text-2xl md:text-3xl font-extrabold mb-2">Yeso<span class="efecto-colors">Colors</span></div>
+          <p class="text-rose-200 text-xs md:text-sm">Figuras de yeso pintadas a mano en Bogotá</p>
+        </div>
+        <div class="flex items-center gap-4">
+          <a href="https://www.instagram.com/yesocolors/" target="_blank"
+            class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors hover:scale-110"
+            aria-label="Instagram">
+            <i class="fab fa-instagram text-xl"></i>
+          </a>
+          <a href="https://wa.me/573118033646" target="_blank"
+            class="w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors hover:scale-110"
+            aria-label="WhatsApp">
+            <i class="fab fa-whatsapp text-xl"></i>
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-white/20 mt-8 pt-6 text-center text-rose-200 text-xs">
+        <p>© 2025 YesoColors. Todos los derechos reservados. Hecho con ❤️ en Bogotá.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div id="imageModal" class="fixed inset-0 z-50 hidden items-center justify-center bg-black/80 backdrop-blur-sm p-4">
+    <div class="bg-white dark:bg-gray-800 rounded-3xl p-4 md:p-6 max-w-3xl w-full shadow-2xl relative">
+      <button onclick="closeModal()"
+        class="absolute top-4 right-4 w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center hover:scale-110 transition-transform"
+        aria-label="Cerrar">
+        <i class="fas fa-times"></i>
+      </button>
+      <img id="modalImage" class="w-full h-auto rounded-xl" alt="Vista ampliada">
+    </div>
+  </div>
+
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
