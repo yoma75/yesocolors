@@ -87,7 +87,7 @@ body {
   width: 100%;
 }
 
-/* ✅ NUEVO: Estilos para el nav fijo */
+/* Estilos para el nav fijo */
 .nav-text {
   color: white;
   transition: color 0.3s ease;
