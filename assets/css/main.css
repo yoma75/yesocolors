@@ -1,92 +1,81 @@
-body,
-nav,
-.hero {
+body {
+	background-color: white;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
 }
 
-
-.navbar {
-	position: fixed;
-	/* Siempre arriba y encima */
-	top: 0;
-	width: 100%;
-	z-index: 1000;
-	background-color: transparent;
-	/* Inicialmente transparente */
-	transition: background-color 0.4s ease, box-shadow 0.4s ease;
-	/* Animación suave */
-	padding: 1rem;
+.efecto-colors {
+	background: linear-gradient(to right, #FF6B6B, #4ECDC4, #A78BFA, #FDBA74, #FB7185, #7DD3FC);
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	color: transparent;
+	display: inline-block;
+	font-weight: bold;
+	background-size: 200% 100%;
+	animation: gradientShift 4s ease infinite;
 }
 
-/* Clase que se activa al hacer scroll */
-.navbar.scrolled {
-	background-color: #add8e6 !important;
-	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+@keyframes gradientShift {
+
+	0%,
+	100% {
+		background-position: 0% 50%;
+	}
+
+	50% {
+		background-position: 100% 50%;
+	}
 }
 
-.navbar-nav .nav-link {
-	font-size: 1.3rem;
-	color: rgb(74, 70, 70);
-	/* Texto blanco sobre la imagen */
-	margin-right: 1rem;
-	transition: color 0.3s ease;
-
-}
-
-.navbar-nav .nav-link:hover {
-	color: #ed1cb9;
-	text-transform: uppercase;
-}
-
-/* HERO */
-.hero {
-	width: 100%;
-	min-height: 100vh;
-	background-image: url('../img/imagenHero.jpeg');
+.hero-bg {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../img/imagenHero.jpeg');
 	background-size: cover;
 	background-position: center;
-	background-repeat: no-repeat;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	text-align: center;
-	padding: 2rem;
-	box-sizing: border-box;
+	background-attachment: fixed;
+}
+
+.dark .hero-bg {
+	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../img/imagenHero.jpeg');
+}
+
+.theme-btn {
+	background-color: rgba(255, 255, 255, 0.3);
+	color: #1f2937;
+	transition: all 0.3s ease;
+}
+
+#mainNav:not(.scrolled) .theme-btn {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: white;
+}
+
+.dark #mainNav.scrolled .theme-btn {
+	background-color: rgba(31, 41, 55, 0.6);
+	color: #f3f4f6;
+}
+
+.theme-btn:hover {
+	transform: scale(1.1);
+}
+
+.fade-in {
+	animation: fadeIn 0.8s ease-out;
 }
 
 .hero-content {
-	background-color: rgba(0, 0, 0, 0.4);
-	color: white;
-	padding: 2rem;
-	border-radius: 10px;
-	max-width: 90%;
 	animation: fadeIn 2.5s ease;
 }
 
-.hero h1 {
-	font-size: 2.5rem;
-	margin-bottom: 1rem;
-}
-
-.hero p {
-	font-size: 1.2rem;
-}
-
-/* CLASE UNIVERSAL DE DEGRADADO palabra COLORS */
-.efecto-colors {
-  background: linear-gradient(to right,
-      #FF5733, #33FF57, #3357FF, #F333FF, #FF33A8, #FFD433);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  display: inline-block;
-  /* Importante para que el degradado se ajuste bien al texto */
-  font-weight: bold;
-}
-
-/* Animación para hero content */
 @keyframes fadeIn {
 	from {
 		opacity: 0;
@@ -99,155 +88,121 @@ nav,
 	}
 }
 
-/* Ajuste en móviles: espacio extra */
-@media (max-width: 991px) {
-	.hero {
-		padding-top: 160px;
-	}
-
-	.navbar-collapse {
-		background-color: rgba(0, 0, 0, 0.9);
-		padding: 1rem;
-		border-radius: 0 0 10px 10px;
-		animation: fadeMenu 0.4s ease;
-	}
-
-	.navbar-collapse .nav-link {
-		color: white !important;
-	}
-
-	.navbar-collapse .nav-link:hover {
-		color: #ed1cb9 !important;
-	}
+.nav-link {
+	position: relative;
 }
 
-
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 998px) {
-	.hero {
-		min-height: 50vh;
-		padding-top: 160px;
-		padding-bottom: 2rem;
-	}
-
-	.hero h1 {
-		font-size: 2rem;
-	}
-
-	.hero p {
-		font-size: 1rem;
-	}
-
-	.navbar-brand img {
-		height: 130px !important;
-		width: 137px !important;
-	}
-
-	.navbar-collapse {
-		background-color: #add8e6;
-		padding: 1rem;
-		border-radius: 0 0 10px 10px;
-		/* opcional, estética */
-	}
-
-	.navbar-collapse .nav-link {
-		color: rgb(88, 81, 81) !important;
-		font-size: 1.3rem;
-		text-align: center;
-
-	}
-
-	.navbar-collapse .nav-link:hover {
-		color: #ed1cb9 !important;
-	}
-
-	@keyframes fadeMenu {
-		from {
-			opacity: 0;
-			transform: translateY(-10px);
-		}
-
-		to {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
+.nav-link::after {
+	content: '';
+	position: absolute;
+	bottom: -4px;
+	left: 0;
+	width: 0;
+	height: 2px;
+	background: linear-gradient(90deg, #FF6B6B, #4ECDC4, #A78BFA);
+	transition: width 0.3s ease;
 }
 
+.nav-link:hover::after {
+	width: 100%;
+}
 
-/* SECCION FIGURAS */
+.nav-text {
+	color: white;
+	transition: color 0.3s ease;
+}
+
+#mainNav.scrolled .nav-text {
+	color: #1f2937;
+}
+
+.dark #mainNav.scrolled .nav-text {
+	color: #f3f4f6;
+}
+
 .thumbnail {
 	cursor: pointer;
 	border: 2px solid transparent;
-	transition: 0.3s;
-	width: 60px;
-	height: 60px;
-	object-fit: cover;
+	transition: all 0.3s ease;
+	width: 50px;
+	height: 50px;
+	object-fit: contain;
+	border-radius: 8px;
+	background-color: white;
+	padding: 2px;
+	flex-shrink: 0;
 }
 
 .thumbnail:hover,
 .thumbnail.active {
-	border: 2px dotted #36e2f1;
+	border: 2px solid #4ECDC4;
+	transform: scale(1.15);
 }
 
 .main-image {
 	cursor: pointer;
 	max-width: 100%;
-	max-height: 200px;	/* Ajusta esta altura según tus necesidades */
+	max-height: 220px;
 	width: auto;
 	height: auto;
 	display: block;
-	margin: 0 auto;	/* Centra la imagen horizontalmente */
+	margin: 0 auto;
+	transition: transform 0.3s ease;
 }
 
-.figure-container {
-	height: 500px;	/* Ajusta esta altura según tus necesidades */
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	align-items: center;	/* Centra el contenido horizontalmente */
+.main-image:hover {
+	transform: scale(1.05);
 }
 
-.figure-container img {
-	max-height: 200px;	/* Ajusta esta altura según tus necesidades */
-	width: auto;
+.btn-comprar {
+	background: linear-gradient(135deg, #FF6B6B 0%, #A78BFA 100%);
+	transition: all 0.3s ease;
 }
 
-/* REDES SOCIALES */
-.social-icons i {
-	font-size: 1.5rem;
-	transition: color 0.3s ease-in-out;
+.btn-comprar:hover {
+	background: linear-gradient(135deg, #FB7185 0%, #8B5CF6 100%);
+	transform: scale(1.05);
+	box-shadow: 0 8px 20px rgba(167, 139, 250, 0.4);
 }
 
-.social-icons i.bi-instagram:hover {
-	color: #E4405F;
-}
-
-.social-icons i.bi-whatsapp:hover {
-	color: #28f21d;
-}
-
-
-/* Para navegadores WebKit (Chrome, Edge, Safari, Opera) */
 ::-webkit-scrollbar {
-  width: 10px; /* ancho de la barra */
+	width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1; /* color del fondo */
+	background: linear-gradient(180deg, #FF6B6B, #4ECDC4, #A78BFA, #FDBA74);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(0, 247, 255); /* color de la barra */
-  border-radius: 5px; /* esquinas redondeadas */
+	background: linear-gradient(180deg, #FF6B6B, #4ECDC4, #A78BFA, #FDBA74);
+	border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(0, 139, 83); /* color al pasar el mouse */
+	background: linear-gradient(180deg, #FB7185, #7DD3FC, #8B5CF6, #FDBA74);
 }
 
-/* Para Firefox */
 * {
-  scrollbar-width: thin; /* delgado */
-  scrollbar-color: rgb(199, 4, 95) #f1f1f1; /* barra roja, fondo gris */
+	scrollbar-width: thin;
+	scrollbar-color: #FF6B6B #f1f1f1;
+}
+
+@media (max-width: 768px) {
+	.hero-bg {
+		background-attachment: scroll;
+	}
+}
+
+@media (max-width: 280px) {
+	.hero-content h1 {
+		font-size: 1.5rem !important;
+	}
+
+	.hero-content p {
+		font-size: 0.9rem !important;
+	}
+
+	.hero-content {
+		padding: 1rem !important;
+	}
 }
